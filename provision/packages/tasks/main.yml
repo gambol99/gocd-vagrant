@@ -1,0 +1,10 @@
+#
+#   Author: Rohith (gambol99@gmail.com)
+#   Date: 2015-03-09 11:31:57 +0000 (Mon, 09 Mar 2015)
+#
+#  vim:ts=2:sw=2:et
+#
+
+- name: install some required packages
+  yum: name="{{ item }}" state=present
+  with_items: "{{ packages }}"

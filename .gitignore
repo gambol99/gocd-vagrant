@@ -1,0 +1,11 @@
+#
+#   Author: Rohith (gambol99@gmail.com)
+#   Date: 2015-03-09 11:51:51 +0000 (Mon, 09 Mar 2015)
+#
+#  vim:ts=2:sw=2:et
+#
+*.swp
+.vagrant/
+provision/geerlingguy.git
+provision/geerlingguy.java
+provision/geerlingguy.ntp

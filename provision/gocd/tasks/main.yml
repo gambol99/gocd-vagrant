@@ -1,0 +1,20 @@
+#
+#   Author: Rohith (gambol99@gmail.com)
+#   Date: 2015-03-09 10:46:41 +0000 (Mon, 09 Mar 2015)
+#
+#  vim:ts=2:sw=2:et
+#
+- name: copying the repository files
+  copy: src=gocd.repo dest=/etc/yum.repos.d/gocd.repo owner=root group=root mode=0444
+
+- name: install the gocd package
+  yum: name=go-server state=present
+
+- name: install the gocd agent
+  yum: name=go-agent state=present
+
+- name: ensure the go-server service
+  service: name=go-server state=started
+
+- name: ensure the go-agent service
+  service: name=go-agent state=started
